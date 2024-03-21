@@ -4,6 +4,7 @@ from PyPDF2 import PdfReader
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain.embeddings.openai import OpenAIEmbeddings
 from langchain.vectorstores import FAISS
+from streamlit_extras.add_vertical_space import add_vertical_space
 from langchain.llms import OpenAI
 from langchain.chains.question_answering import load_qa_chain
 from langchain.callbacks import get_openai_callback
@@ -26,7 +27,7 @@ with st.sidebar:
     - [OpenAI](https://platform.openai.com/docs/models) LLM model
  
     ''')
-    
+    add_vertical_space(5)
     st.write('Made with ❤️ by Dawood Ahmad Khan')
 
 def summarize_text(text, num_sentences=6):
