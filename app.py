@@ -1,7 +1,6 @@
 import streamlit as st
 from dotenv import load_dotenv
 from PyPDF2 import PdfReader
-from streamlit_extras.add_vertical_space import add_vertical_space
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain.embeddings.openai import OpenAIEmbeddings
 from langchain.vectorstores import FAISS
@@ -27,7 +26,7 @@ with st.sidebar:
     - [OpenAI](https://platform.openai.com/docs/models) LLM model
  
     ''')
-    add_vertical_space(5)
+    
     st.write('Made with ❤️ by Dawood Ahmad Khan')
 
 def summarize_text(text, num_sentences=6):
